@@ -12,7 +12,7 @@ CREATE TABLE GeoIPCache (
     IPRange VARCHAR(100),
     CountryID INT,
     FOREIGN KEY (CountryID) REFERENCES Countries(ID),
-    PRIMARY KEY ID
+    PRIMARY KEY (ID)
 ) ENGINE=MEMORY;
 
 CREATE TABLE ProductDescription (
@@ -21,14 +21,14 @@ CREATE TABLE ProductDescription (
     ProductID INT,
     Description VARCHAR(100),
     FOREIGN KEY (CountryID) REFERENCES Countries(ID),
-    PRIMARY KEY ID
+    PRIMARY KEY (ID)
 ) ENGINE=MyISAM;
 
 CREATE TABLE Logs (
     ID INT AUTO_INCREMENT,
     Time DATE,
     LogRecord VARCHAR(100),
-    PRIMARY KEY ID
+    PRIMARY KEY (ID)
 ) ENGINE=Blackhole;
 
 CREATE TABLE ProductReporting (
